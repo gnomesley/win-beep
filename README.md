@@ -21,4 +21,5 @@ beep(600, 1000) // frequency: 600Hz, duration: 1000ms
 
 MIT
 
+[npm-image]: https://img.shields.io/npm/v/win-beep
 [npm-url]: https://npmjs.com/package/win-beep
