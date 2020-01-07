@@ -24,6 +24,13 @@
     "email": "caiyexiang1@live.com",
     "url": "https://caiyexiang.com/"
   },
+  "keywords": [
+    "beep",
+    "win32",
+    "windows",
+    "frequency",
+    "duration"
+  ],
   "license": "MIT",
   "gypfile": true,
   "devDependencies": {
