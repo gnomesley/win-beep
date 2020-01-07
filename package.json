@@ -1,0 +1,58 @@
+{
+  "name": "win-beep",
+  "version": "1.0.0",
+  "description": "Windows-only native addon to play back a beep to user.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "lint": "tslint \"src/**/*\" --project tsconfig.json",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "install": "node-gyp rebuild",
+    "build": "rimraf dist/ && tsc",
+    "specs": "jest --config jestconfig.json",
+    "test": "npm run build && npm run lint && npm run specs",
+    "coverage": "jest --coverage --config jestconfig.json",
+    "start": "tsc -w",
+    "commit": "git-cz",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "author": {
+    "name": "caiyexiang",
+    "email": "caiyexiang1@live.com",
+    "url": "https://caiyexiang.com/"
+  },
+  "license": "MIT",
+  "gypfile": true,
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.4",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@types/jest": "^24.0.25",
+    "@types/node": "^13.1.4",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.0.2",
+    "husky": "^3.1.0",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.5.0",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.0",
+    "ts-jest": "^24.2.0",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.7.4"
+  },
+  "homepage": "https://github.com/caiyexiang/win-beep#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caiyexiang/win-beep.git"
+  },
+  "bugs": {
+    "url": "https://github.com/caiyexiang/win-beep/issues"
+  },
+  "dependencies": {
+    "tslib": "^1.10.0"
+  }
+}
